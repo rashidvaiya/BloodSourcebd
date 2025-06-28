@@ -25,16 +25,22 @@ body {
 
 .parent {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     box-sizing: border-box;
     flex-grow: 1; /* Allows the parent to take up available space */
+}
+
+@media (min-width: 768px) {
+    .parent {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 .div1 {
     background-color: #a8dadc;
