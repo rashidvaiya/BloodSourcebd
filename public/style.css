@@ -10,6 +10,7 @@
   --color-muted: #8D7C7C; /* Placeholder text, disabled states, muted labels */
   --color-error: #5F0708; /* Error messages, error backgrounds, form alerts */
   --color-accent-dark: #A2161B; /* Stronger CTA, alert highlights, badges */
+  --color-accent-rgb: 217, 28, 31; /* RGB values for --color-accent */
 }
 
 /* DARK MODE OVERRIDES */
@@ -198,6 +199,64 @@ body {
 }
 
 /* The code below is adapted from UIverse.io by RiccardoRapelli (https://uiverse.io/RiccardoRapelli/jolly-chicken-91), licensed under the MIT License. */
+
+/* Login Form Styling */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--color-surface);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#loginForm h2 {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#loginForm label {
+    color: var(--color-text);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(var(--color-accent-rgb), 0.5);
+}
+
+#loginForm input[type="submit"] {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: var(--color-accent-hover);
+}
 
 .switch {
   position: relative;
