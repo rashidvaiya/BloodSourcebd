@@ -37,20 +37,27 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
 }
-.header,
+.header {
+    background-color: var(--color-white-bg); /* Using a root variable for background */
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
 .footer {
-    background-color: #1d3557; /* Dark Blue */
-    color: #f1faee;
+    background-color: var(--color-white-bg); /* Using a root variable for background */
+    color: var(--color-rojo-accent) ; /* Using a root variable for text color */
     padding: 10px;
     text-align: center;
     font-size: 1.8em;
     font-weight: bold;
 }
 .header {
-    border-bottom: 2px solid #457b9d;
+    border-bottom: 2px solid var(--color-silver-border) ;
 }
 .footer {
-    border-top: 2px solid #457b9d;
+    border-top: 2px solid var(--color-silver-border);
     margin-top: auto; /* Pushes the footer to the bottom */
 }
 
