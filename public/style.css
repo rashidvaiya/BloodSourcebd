@@ -1,3 +1,34 @@
+:root {
+   /* === LIGHT MODE COLOR VARIABLES === */ 
+ 
+   --color-white-bg:           #FFFFFF; /* Page body background, main container backgrounds */ 
+   --color-black-text:         #0B090A; /* Primary text (headings, body content) */ 
+   --color-night-subtext:      #111517; /* Subtext, captions, metadata, labels */ 
+   --color-rojo-accent:        #D91C1F; /* Primary buttons, links, accents */ 
+   --color-imperial-red-hover: #E84A4D; /* Button hover states, link hover colors */ 
+   --color-silver-border:      #CCCCCC; /* Input borders, card borders, dividers */ 
+   --color-platinum-surface:   #E3DEE1; /* Card backgrounds, modal surfaces, elevated blocks */ 
+   --color-cinereous-muted:    #8D7C7C; /* Placeholder text, disabled states, muted labels */ 
+   --color-Rosewood-error:     #5F0708; /* Error messages, error backgrounds, form alerts */ 
+   --color-Madder-accent-dark: #A2161B; /* Stronger CTA, alert highlights, badges */ 
+ }
+ 
+ @media (prefers-color-scheme: dark) {
+   :root {
+     /* === DARK MODE COLOR VARIABLES === */ 
+ 
+     --color-black-bg:           #0B090A; /* Page body background, dark containers */ 
+     --color-white-text:         #FFFFFF; /* Primary text on dark backgrounds */ 
+     --color-platinum-subtext:   #E3DEE1; /* Subtext, secondary text, labels */ 
+     --color-rojo-accent:        #D91C1F; /* Primary buttons, links, accents (same as light) */ 
+     --color-imperial-red-hover: #E84A4D; /* Hover states in dark mode */ 
+     --color-cinereous-border:   #8D7C7C; /* Borders in cards, inputs, dividers */ 
+     --color-night-surface:      #111517; /* Card backgrounds, modals, surface elevation */ 
+     --color-silver-muted:       #CCCCCC; /* Muted text, disabled labels, placeholders */ 
+     --color-Rosewood-error:     #5F0708; /* Error text and alert backgrounds */ 
+     --color-Madder-accent-dark: #A2161B; /* Alert accents, strong warnings, badges */ 
+   }
+ }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,7 +41,7 @@ body {
 .footer {
     background-color: #1d3557; /* Dark Blue */
     color: #f1faee;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: 1.8em;
     font-weight: bold;
@@ -120,3 +151,269 @@ body {
         display: flex; /* Visible on desktop screens */
     }
 }
+
+/* The code below is adapted from UIverse.io by RiccardoRapelli (https://uiverse.io/RiccardoRapelli/jolly-chicken-91), licensed under the MIT License. */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch #input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sun-moon {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: yellow;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#input:checked + .slider {
+  background-color: black;
+}
+
+#input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+#input:checked + .slider .sun-moon {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: white;
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+.moon-dot {
+  opacity: 0;
+  transition: 0.4s;
+  fill: gray;
+}
+
+#input:checked + .slider .sun-moon .moon-dot {
+  opacity: 1;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round .sun-moon {
+  border-radius: 50%;
+}
+
+#moon-dot-1 {
+  left: 10px;
+  top: 3px;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  z-index: 4;
+}
+
+#moon-dot-2 {
+  left: 2px;
+  top: 10px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 4;
+}
+
+#moon-dot-3 {
+  left: 16px;
+  top: 18px;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  z-index: 4;
+}
+
+#light-ray-1 {
+  left: -8px;
+  top: -8px;
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  z-index: -1;
+  fill: white;
+  opacity: 10%;
+}
+
+#light-ray-2 {
+  left: -50%;
+  top: -50%;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  z-index: -1;
+  fill: white;
+  opacity: 10%;
+}
+
+#light-ray-3 {
+  left: -18px;
+  top: -18px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: -1;
+  fill: white;
+  opacity: 10%;
+}
+
+.cloud-light {
+  position: absolute;
+  fill: #eee;
+  animation-name: cloud-move;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+.cloud-dark {
+  position: absolute;
+  fill: #ccc;
+  animation-name: cloud-move;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+#cloud-1 {
+  left: 30px;
+  top: 15px;
+  width: 40px;
+}
+
+#cloud-2 {
+  left: 44px;
+  top: 10px;
+  width: 20px;
+}
+
+#cloud-3 {
+  left: 18px;
+  top: 24px;
+  width: 30px;
+}
+
+#cloud-4 {
+  left: 36px;
+  top: 18px;
+  width: 40px;
+}
+
+#cloud-5 {
+  left: 48px;
+  top: 14px;
+  width: 20px;
+}
+
+#cloud-6 {
+  left: 22px;
+  top: 26px;
+  width: 30px;
+}
+
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  fill: white;
+  opacity: 0;
+  animation-name: star-blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#star-1 {
+  top: 5px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  animation-delay: 0.2s;
+}
+
+#star-2 {
+  top: 15px;
+  left: 40px;
+  width: 2px;
+  height: 2px;
+  animation-delay: 0.5s;
+}
+
+#star-3 {
+  top: 25px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+  animation-delay: 0.8s;
+}
+
+#star-4 {
+  top: 8px;
+  left: 25px;
+  width: 2px;
+  height: 2px;
+  animation-delay: 1.1s;
+}
+
+@keyframes star-blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* End of adapted code from UIverse.io by RiccardoRapelli  */
