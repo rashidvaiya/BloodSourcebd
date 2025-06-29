@@ -87,22 +87,45 @@
             </div>
             <div id="register-content" class="content-section hidden">
                 <div class="column-container">
-                    <div class="column-a">Column A</div>
+                    <div class="column-a">
+                        <h2>Register</h2>
+                        <form id="registrationForm">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required><br><br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required><br><br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required><br><br>
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+                            <input type="submit" value="Register">
+                        </form>
+                    </div>
                     <div class="column-b">Column B</div>
                 </div>
             </div>
             <div id="signup-content" class="content-section hidden">
                 <div class="column-container">
-                    <div class="column-a">Sign Up Here!</div>
+                    <div class="column-a">
+                        <h2>Log In</h2>
+                        <form id="loginForm">
+                            <label for="loginUsername">Username:</label>
+                            <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+                            <label for="loginPassword">Password:</label>
+                            <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                            <input type="submit" value="Log In">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="div2">
-            <div class="row1"><button id="home-btn">Home</button><button id="signup-btn">Sign Up</button><button id="register-btn">Register</button></div>
+            <div class="row1"><button id="home-btn">Home</button><button id="signup-btn">Log In</button><button id="register-btn">Register</button></div>
             <div class="row2">Row 2 Content</div>
         </div>
     </div>
     <footer class="footer">© 2025 BloodSource. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></footer>
     <script src="script.js"></script>
+    <script src="register_form.js"></script>
 </body>
 </html>

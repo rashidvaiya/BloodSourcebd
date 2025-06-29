@@ -60,4 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('darkTheme', 'false');
         }
     });
+
+    const loginForm = document.getElementById('loginForm');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Here you would typically send the data to a server for authentication
+            console.log('Login Data:', { username, password });
+            alert('Login attempt successful! (Data logged to console)');
+
+            // Optionally, clear the form
+            loginForm.reset();
+        });
+    }
 });
