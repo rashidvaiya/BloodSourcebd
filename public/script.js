@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (homeBtn && div1) {
         homeBtn.addEventListener('click', () => {
-            div1.innerHTML = `<div class="column-container"><div class="column-a">Welcome Home!</div><div class="column-b"></div></div>`;
+            div1.innerHTML = `<div class="column-container"><div class="column-a">Welcome Home!</div>`;
             div1.style.padding = originalDiv1Padding;
         });
     }
 
     if (signupBtn && div1) {
         signupBtn.addEventListener('click', () => {
-            div1.innerHTML = `<div class="column-container"><div class="column-a">Sign Up Here!</div><div class="column-b"></div></div>`;
+            div1.innerHTML = `<div class="column-container"><div class="column-a">Sign Up Here!</div>`;
             div1.style.padding = originalDiv1Padding;
         });
     }
