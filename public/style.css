@@ -56,11 +56,39 @@ body {
 
 .footer {
     background-color: var(--color-white-bg); /* Using a root variable for background */
-    color: var(--color-light-rojo-accent) ; /* Using a root variable for text color */
+    color: var(--color-light-rojo-accent);
     padding: 10px;
     text-align: center;
-    font-size: 1.8em;
-    font-weight: bold;
+    font-size: 0.9em; /* Smaller font size for general text */
+    font-weight: normal; /* Normal font weight */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer a {
+    color: var(--color-light-rojo-accent); /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 5px; /* Space between links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.8em;
+        padding: 15px 10px;
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+
+    .footer a {
+        display: inline-block; /* Allow links to be in a line, but wrap */
+        margin: 5px; /* Adjust margin for wrapped links */
+    }
 }
 .header {
     border-bottom: 2px solid var(--color-light-silver-border) ;
