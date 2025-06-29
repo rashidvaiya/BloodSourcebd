@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (registerBtn && div1) {
         registerBtn.addEventListener('click', () => {
             div1.innerHTML = `
-                <div style="display: flex; flex-direction: row; width: 100%; height: 100%;">
-                    <div style="flex: 1; background-color:rgb(206, 175, 83); display: flex; justify-content: center; align-items: center; font-size: 1.2em; color: var(--primary-color); border-right: 1px solid var(--secondary-color); padding: 20px; text-align: center;">Column A</div>
-                    <div style="flex: 1; background-color:rgb(98, 170, 89); display: flex; justify-content: center; align-items: center; font-size: 1.2em; color: var(--primary-color); padding: 20px; text-align: center;">Column B</div>
+                <div class="column-container">
+                    <div class="column-a">Column A</div>
+                    <div class="column-b">Column B</div>
                 </div>
             `;
             div1.style.padding = '0'; // Remove padding to make sub-columns fill the space
