@@ -54,7 +54,7 @@ body {
 }
 .div2 {
     background-color: #457b9d; /* Medium Blue */
-    padding: 20px;
+    padding: 0px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
