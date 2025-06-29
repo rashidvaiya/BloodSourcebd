@@ -1,37 +1,36 @@
 :root {
-   /* === LIGHT MODE COLOR VARIABLES === */ 
- 
-   --color-light-white-bg:           #FFFFFF; /* Page body background, main container backgrounds */ 
-   --color-light-black-text:         #0B090A; /* Primary text (headings, body content) */ 
-   --color-light-night-subtext:      #111517; /* Subtext, captions, metadata, labels */ 
-   --color-light-rojo-accent:        #D91C1F; /* Primary buttons, links, accents */ 
-   --color-light-imperial-red-hover: #E84A4D; /* Button hover states, link hover colors */ 
-   --color-light-silver-border:      #CCCCCC; /* Input borders, card borders, dividers */ 
-   --color-light-platinum-surface:   #E3DEE1; /* Card backgrounds, modal surfaces, elevated blocks */ 
-   --color-light-cinereous-muted:    #8D7C7C; /* Placeholder text, disabled states, muted labels */ 
-   --color-light-Rosewood-error:     #5F0708; /* Error messages, error backgrounds, form alerts */ 
-   --color-light-Madder-accent-dark: #A2161B; /* Stronger CTA, alert highlights, badges */ 
- }
- 
- @media (prefers-color-scheme: dark) {
-   :root {
-     /* === DARK MODE COLOR VARIABLES === */ 
- 
-     --color-black-bg:           #0B090A; /* Page body background, dark containers */ 
-     --color-white-text:         #FFFFFF; /* Primary text on dark backgrounds */ 
-     --color-platinum-subtext:   #E3DEE1; /* Subtext, secondary text, labels */ 
-     --color-rojo-accent:        #D91C1F; /* Primary buttons, links, accents (same as light) */ 
-     --color-imperial-red-hover: #E84A4D; /* Hover states in dark mode */ 
-     --color-cinereous-border:   #8D7C7C; /* Borders in cards, inputs, dividers */ 
-     --color-night-surface:      #111517; /* Card backgrounds, modals, surface elevation */ 
-     --color-silver-muted:       #CCCCCC; /* Muted text, disabled labels, placeholders */ 
-     --color-Rosewood-error:     #5F0708; /* Error text and alert backgrounds */ 
-     --color-Madder-accent-dark: #A2161B; /* Alert accents, strong warnings, badges */ 
-   }
- }
-  .hidden {
-            display: none;
-        }
+  /* === LIGHT MODE COLOR VARIABLES === */
+  --color-bg: #FFFFFF; /* Page body background, main container backgrounds */
+  --color-text: #0B090A; /* Primary text (headings, body content) */
+  --color-subtext: #111517; /* Subtext, captions, metadata, labels */
+  --color-accent: #D91C1F; /* Primary buttons, links, accents */
+  --color-accent-hover: #E84A4D; /* Button hover states, link hover colors */
+  --color-border: #CCCCCC; /* Input borders, card borders, dividers */
+  --color-surface: #E3DEE1; /* Card backgrounds, modal surfaces, elevated blocks */
+  --color-muted: #8D7C7C; /* Placeholder text, disabled states, muted labels */
+  --color-error: #5F0708; /* Error messages, error backgrounds, form alerts */
+  --color-accent-dark: #A2161B; /* Stronger CTA, alert highlights, badges */
+}
+
+/* DARK MODE OVERRIDES */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0B090A; /* Page body background, dark containers */
+    --color-text: #FFFFFF; /* Primary text on dark backgrounds */
+    --color-subtext: #E3DEE1; /* Subtext, secondary text, labels */
+    --color-accent: #D91C1F; /* Primary buttons, links, accents (same as light) */
+    --color-accent-hover: #E84A4D; /* Hover states in dark mode */
+    --color-border: #8D7C7C; /* Borders in cards, inputs, dividers */
+    --color-surface: #111517; /* Card backgrounds, modals, surface elevation */
+    --color-muted: #CCCCCC; /* Muted text, disabled labels, placeholders */
+    --color-error: #5F0708; /* Error text and alert backgrounds */
+    --color-accent-dark: #A2161B; /* Alert accents, strong warnings, badges */
+  }
+}
+
+.hidden {
+  display: none;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -221,7 +220,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-light-rojo-accent);
+  background-color: var(--color-accent);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 0;
