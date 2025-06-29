@@ -29,6 +29,9 @@
      --color-Madder-accent-dark: #A2161B; /* Alert accents, strong warnings, badges */ 
    }
  }
+  .hidden {
+            display: none;
+        }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -119,7 +122,7 @@ body {
 }
 .div1 {
     background-color: #a8dadc; /* Light Blue */
-    padding: 20px;
+    padding: 0px;
     border-radius: 5px;
     display: flex;
     justify-content: center;

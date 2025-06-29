@@ -4,32 +4,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const signupBtn = document.getElementById('signup-btn');
     const div1 = document.getElementById('div1-content');
 
-    const originalDiv1Content = `
-                <div class="column-container">
-                    <div class="column-a">Column A</div>
-                    <div class="column-b">Column B</div>
-                </div>
-            `;
-    const originalDiv1Padding = '20px'; // Assuming original padding was 20px
+    const homeContent = document.getElementById('home-content');
+    const registerContent = document.getElementById('register-content');
+    const signupContent = document.getElementById('signup-content');
 
-    if (registerBtn && div1) {
+    function showContent(contentToShow) {
+        homeContent.classList.add('hidden');
+        registerContent.classList.add('hidden');
+        signupContent.classList.add('hidden');
+        contentToShow.classList.remove('hidden');
+    }
+
+    // Set default content for div1
+    if (homeContent) {
+        showContent(homeContent);
+    }
+
+    if (registerBtn) {
         registerBtn.addEventListener('click', () => {
-            div1.innerHTML = originalDiv1Content;
-            div1.style.padding = '0'; // Remove padding to make sub-columns fill the space
+            showContent(registerContent);
         });
     }
 
-    if (homeBtn && div1) {
+    if (homeBtn) {
         homeBtn.addEventListener('click', () => {
-            div1.innerHTML = `<div class="column-container"><div class="column-a">Welcome Home!</div>`;
-            div1.style.padding = originalDiv1Padding;
+            showContent(homeContent);
         });
     }
 
-    if (signupBtn && div1) {
+    if (signupBtn) {
         signupBtn.addEventListener('click', () => {
-            div1.innerHTML = `<div class="column-container"><div class="column-a">Sign Up Here!</div>`;
-            div1.style.padding = originalDiv1Padding;
+            showContent(signupContent);
         });
     }
 
