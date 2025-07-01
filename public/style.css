@@ -749,3 +749,258 @@ body {
 }
 
 /* End of adapted code from UIverse.io by RiccardoRapelli  */
+
+/* Registration Form Styles */
+.registration-container {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px 32px 32px 32px;
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-container h2 {
+  color: #d32f2f;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.registration-container p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.step-indicator {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.step-indicator .step {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #f2f2f2;
+  color: #bdbdbd;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.step-indicator .step.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.12);
+}
+
+#registrationForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  min-width: 0;
+}
+
+.form-group.full-width {
+  flex: 2;
+}
+
+.form-group label {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7f7f7;
+  color: #333;
+  margin-bottom: 4px;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #d32f2f;
+  outline: none;
+  background: #fff;
+}
+
+.form-group small {
+  color: #888;
+  font-size: 0.92em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input-with-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-with-button input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.verify-btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.verify-btn:hover {
+  background: #1746a2;
+}
+
+.input-with-flag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.input-with-flag .flag {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px 0 0 8px;
+  padding: 10px 10px 10px 14px;
+  font-size: 1rem;
+  color: #333;
+  border-right: none;
+}
+
+.input-with-flag input {
+  border-radius: 0 8px 8px 0;
+  border-left: none;
+  margin-bottom: 0;
+}
+
+.form-help {
+  margin: 18px 0 10px 0;
+  color: #666;
+  font-size: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-help i {
+  color: #2563eb;
+  margin-left: 4px;
+}
+
+.next-step-btn {
+  width: 100%;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  opacity: 0.7;
+}
+
+.next-step-btn:enabled {
+  opacity: 1;
+}
+
+.next-step-btn:hover:enabled {
+  background: #c62828;
+}
+
+@media (max-width: 900px) {
+  .registration-container {
+    max-width: 98vw;
+    padding: 24px 8px 16px 8px;
+  }
+  .form-row {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .form-group {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .registration-container {
+    padding: 12px 2vw 8px 2vw;
+    border-radius: 10px;
+  }
+  .registration-container h2 {
+    font-size: 1.2rem;
+  }
+  .step-indicator .step {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  .form-group label {
+    font-size: 0.97rem;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 0.97rem;
+    padding: 10px 8px;
+  }
+  .verify-btn {
+    padding: 8px 12px;
+    font-size: 0.97rem;
+  }
+  .form-help {
+    font-size: 0.95rem;
+  }
+  .next-step-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-radius: 6px;
+  }
+}

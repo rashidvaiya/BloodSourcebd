@@ -1,148 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BloodSource</title>
-    <link rel="icon" href="/assets/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-</head>
-<body>
+    <link rel="icon" href="/assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <a href="#" class="logo">BloodSource</a>
-        <label class="switch">
-  <input id="input" type="checkbox" />
-  <div class="slider round">
-    <div class="sun-moon">
-      <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
+      <a href="#" class="logo">BloodSource</a>
+      <label class="switch">
+        <input id="input" type="checkbox" />
+        <div class="slider round">
+          <div class="sun-moon">
+            <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
 
-      <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-      <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="50"></circle>
-      </svg>
-    </div>
-    <div class="stars">
-      <svg id="star-1" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-2" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-3" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-      <svg id="star-4" class="star" viewBox="0 0 20 20">
-        <path
-          d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
-        ></path>
-      </svg>
-    </div>
-  </div>
-</label>
+            <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+          </div>
+          <div class="stars">
+            <svg id="star-1" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-2" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-3" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+            <svg id="star-4" class="star" viewBox="0 0 20 20">
+              <path
+                d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </label>
     </header>
     <div class="parent">
-        <div class="div1" id="div1-content">
-            <div id="home-content" class="content-section">
-                <div class="column-container">
-                    <div class="column-a">Welcome Home!</div>
-                </div>
-            </div>
-            <div id="register-content" class="content-section hidden">
-                <div class="column-container">
-                    <div class="column-a">
-                        <h2>Register</h2>
-                        <form id="registrationForm">
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" required><br><br>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required><br><br>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required><br><br>
-                            <label for="confirm_password">Confirm Password:</label>
-                            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-                            <input type="submit" value="Register">
-                        </form>
-                    </div>
-                    <div class="column-b">Column B</div>
-                </div>
-            </div>
-            <div id="signup-content" class="content-section hidden">
-                <div class="column-container">
-                    <div class="column-a">
-                        <div class="login-card">
-                            <h1>Hi, Welcome Back 👋</h1>
-                            <p>It's great to see you again.</p>
-                            <form>
-                                <div class="input-group">
-                                    <i class="fas fa-user"></i>
-                                    <input type="text" placeholder="Username">
-                                </div>
-                                <div class="input-group">
-                                    <i class="fas fa-lock"></i>
-                                    <input type="password" placeholder="Password" id="password-field">
-                                    <i class="fas fa-eye password-toggle" id="password-toggle"></i>
-                                </div>
-                                <div class="options">
-                                    <label>
-                                        <input type="checkbox"> Remember me
-                                    </label>
-                                    <a href="#">Forgot password?</a>
-                                </div>
-                                <button type="submit" class="login-button">Log In</button>
-                            </form>
-                            <p class="register-link">Don't have an account! Go to The Register Section 😊</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="div1" id="div1-content">
+        <div id="home-content" class="content-section">
+          <div class="column-container">
+            <div class="column-a">Welcome Home!</div>
+          </div>
         </div>
-        <div class="div2">
-          
-            <div class="row1"><button id="home-btn">Home</button><button id="signup-btn">Log In</button><button id="register-btn">Register</button></div>
-            <div class="row2">Row 2 Content</div>
+        <div id="register-content" class="content-section hidden">
+          <div class="registration-container">
+            <h2>New member registration <span>🥰</span></h2>
+            <p>Step one of two.</p>
+            <div class="step-indicator">
+              <button class="step active">1</button>
+              <button class="step">2</button>
+            </div>
+            <form id="registrationForm" autocomplete="off">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="invitation">Invitation Code</label>
+                  <div class="input-with-button">
+                    <input
+                      type="text"
+                      id="invitation"
+                      name="invitation"
+                      placeholder="Enter code"
+                      required
+                    />
+                    <button type="button" class="verify-btn">Verify</button>
+                  </div>
+                  <small>Enter your invitation code to unlock the form.</small>
+                </div>
+                <div class="form-group">
+                  <label for="fullname">Full Name</label>
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="e.g. Rashid Shahriyar"
+                    required
+                  />
+                  <small>Minimum four characters</small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="e.g. rashidvaiya"
+                    required
+                  />
+                  <small>Minimum four characters.</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="rashidvaiya@example.com"
+                    required
+                  />
+                  <small>We'll never share your email with anyone else.</small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <div class="input-with-flag">
+                    <span class="flag">🇧🇩 +880</span>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="1xxxxxxxxx"
+                      pattern="[0-9]{10}"
+                      required
+                    />
+                  </div>
+                  <small>Enter your 10-digit number (e.g., 1712345678)</small>
+                </div>
+                <div class="form-group">
+                  <label for="division">Division</label>
+                  <select id="division" name="division" required>
+                    <option value="">Select Division</option>
+                    <!-- Add options here -->
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="district">District</label>
+                  <select id="district" name="district" required>
+                    <option value="">Select District</option>
+                    <!-- Add options here -->
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="occupation">Occupation</label>
+                  <select id="occupation" name="occupation" required>
+                    <option value="">Select Occupation</option>
+                    <!-- Add options here -->
+                  </select>
+                  <small>Select your current occupation.</small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group full-width">
+                  <label for="company">At (e.g., Company, Institution)</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="e.g. Google, Dhaka University"
+                    required
+                  />
+                  <small
+                    >Required: Where you work or study (min. 2
+                    characters).</small
+                  >
+                </div>
+              </div>
+              <div class="form-help">
+                <span>😊 Need a hand?</span>
+                <span
+                  >No worries — our AI is here to help
+                  <i class="fa-brands fa-facebook-messenger"></i
+                ></span>
+              </div>
+              <button type="submit" class="next-step-btn" disabled>
+                Next Step
+              </button>
+            </form>
+          </div>
         </div>
+        <div id="signup-content" class="content-section hidden">
+          <div class="column-container">
+            <div class="column-a">
+              <div class="login-card">
+                <h1>Hi, Welcome Back 👋</h1>
+                <p>It's great to see you again.</p>
+                <form>
+                  <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" />
+                  </div>
+                  <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      id="password-field"
+                    />
+                    <i
+                      class="fas fa-eye password-toggle"
+                      id="password-toggle"
+                    ></i>
+                  </div>
+                  <div class="options">
+                    <label> <input type="checkbox" /> Remember me </label>
+                    <a href="#">Forgot password?</a>
+                  </div>
+                  <button type="submit" class="login-button">Log In</button>
+                </form>
+                <p class="register-link">
+                  Don't have an account! Go to The Register Section 😊
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="row1">
+          <button id="home-btn">Home</button
+          ><button id="signup-btn">Log In</button
+          ><button id="register-btn">Register</button>
+        </div>
+        <div class="row2">Row 2 Content</div>
+      </div>
     </div>
-    <footer class="footer">© 2025 BloodSource. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></footer>
+    <footer class="footer">
+      © 2025 BloodSource. All rights reserved. <a href="#">Privacy Policy</a> |
+      <a href="#">Terms and Conditions</a>
+    </footer>
     <script src="script.js"></script>
     <script src="register_form.js"></script>
-</body>
+  </body>
 </html>
