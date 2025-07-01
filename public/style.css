@@ -13,6 +13,180 @@
   --color-accent-rgb: 217, 28, 31; /* RGB values for --color-accent */
 }
 
+/* Login Card Styles */
+.login-card {
+    background-color: var(--color-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-card h1 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.login-card p {
+    color: var(--color-subtext);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-muted);
+    font-size: 1.1em;
+}
+
+.input-group input {
+    width: calc(100% - 60px);
+    padding: 15px 20px 15px 50px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--color-accent);
+}
+
+.input-group .password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--color-muted);
+    font-size: 1.1em;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+.options label {
+    color: var(--color-subtext);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--color-accent);
+}
+
+.options a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.options a:hover {
+    color: var(--color-accent-hover);
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.register-link {
+    margin-top: 30px;
+    color: var(--color-subtext);
+    font-size: 1em;
+}
+
+.register-link a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: var(--color-accent-hover);
+}
+
+/* Font Awesome for icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .login-card h1 {
+        font-size: 1.8em;
+    }
+
+    .login-card p {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        padding: 12px 15px 12px 45px;
+        font-size: 0.9em;
+    }
+
+    .input-group i,
+    .input-group .password-toggle {
+        font-size: 1em;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .options label {
+        margin-bottom: 10px;
+    }
+
+    .login-button {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .register-link {
+        font-size: 0.9em;
+    }
+}
+
 /* DARK MODE OVERRIDES */
 body.dark-mode {
   --color-bg: #0B090A; /* Page body background, dark containers */
