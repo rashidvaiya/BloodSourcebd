@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeContent = document.getElementById("home-content");
   const registerContent = document.getElementById("register-content");
   const signupContent = document.getElementById("signup-content");
+  const columnB = document.getElementById("column-b");
 
   function showContent(contentToShow) {
     homeContent.classList.add("hidden");
     registerContent.classList.add("hidden");
     signupContent.classList.add("hidden");
+    columnB.classList.add("hidden");
     contentToShow.classList.remove("hidden");
   }
 
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (registerBtn) {
     registerBtn.addEventListener("click", () => {
       showContent(registerContent);
+      columnB.classList.remove("hidden");
 
       const passwordField = document.getElementById("password-field");
       const passwordToggle = document.getElementById("password-toggle");
@@ -44,12 +47,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (homeBtn) {
     homeBtn.addEventListener("click", () => {
       showContent(homeContent);
+      columnB.classList.add("hidden");
     });
   }
 
   if (signupBtn) {
     signupBtn.addEventListener("click", () => {
       showContent(signupContent);
+      columnB.classList.add("hidden");
     });
   }
 
