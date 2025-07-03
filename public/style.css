@@ -52,13 +52,13 @@ svg {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Force header to always be a row, even on small screens */
+/* Ensure header is responsive */
 .header {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: nowrap !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 /* Responsive Styles */
@@ -68,7 +68,30 @@ svg {
   }
 
   .header {
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Ensure header content wraps on small screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .login-card {
+    max-width: 90%; /* Make login card more flexible on small screens */
+    margin: 20px auto; /* Adjust margin */
+    padding: 25px 20px; /* Adjust padding */
+  }
+
+  .login-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-card p {
+    font-size: 1rem;
+  }
+
+  .row1 {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .row1 button {
+    margin: 5px 0; /* Add vertical margin between stacked buttons */
   }
 }
 
