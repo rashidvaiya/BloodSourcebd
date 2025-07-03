@@ -16,12 +16,14 @@
     />
   </head>
   <body>
+    <!-- Header with logo and theme switch -->
     <header class="header">
       <a href="#" class="logo">BloodSource</a>
       <label class="switch">
         <input id="input" type="checkbox" />
         <div class="slider round">
           <div class="sun-moon">
+            <!-- Moon Dots -->
             <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
@@ -31,6 +33,7 @@
             <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
+            <!-- Light Rays -->
             <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
@@ -40,7 +43,7 @@
             <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
-
+            <!-- Clouds Dark -->
             <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
@@ -50,6 +53,7 @@
             <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
+            <!-- Clouds Light -->
             <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="50"></circle>
             </svg>
@@ -85,17 +89,21 @@
         </div>
       </label>
     </header>
+
+    <!-- Main Content -->
     <div class="parent">
       <div class="div1" id="div1-content">
+        <!-- Home Section -->
         <div id="home-content" class="content-section">
           <div class="column-container">
             <div class="column-a">Welcome Home!</div>
           </div>
         </div>
+
+        <!-- Register Section -->
         <div id="register-content" class="content-section hidden">
           <div class="registration-container">
-            <h2>New member registration
-<span>🤩</span></h2>
+            <h2>New member registration <span>🤩</span></h2>
             <p>Step one of two.</p>
             <div class="step-indicator">
               <button class="step active">1</button>
@@ -204,18 +212,17 @@
                     placeholder="e.g. Google, Dhaka University"
                     required
                   />
-                  <small
-                    >Required: Where you work or study (min. 2
-                    characters).</small
-                  >
+                  <small>
+                    Required: Where you work or study (min. 2 characters).
+                  </small>
                 </div>
               </div>
               <div class="form-help">
                 <span>😊 Need a hand?</span>
-                <span
-                  >No worries — our AI is here to help
-                  <i class="fa-brands fa-facebook-messenger"></i
-                ></span>
+                <span>
+                  No worries — our AI is here to help
+                  <i class="fa-brands fa-facebook-messenger"></i>
+                </span>
               </div>
               <button type="submit" class="next-step-btn" disabled>
                 Next Step
@@ -223,6 +230,8 @@
             </form>
           </div>
         </div>
+
+        <!-- Signup/Login Section -->
         <div id="signup-content" class="content-section hidden">
           <div class="column-container">
             <div class="column-a">
@@ -260,6 +269,7 @@
           </div>
         </div>
 
+        <!-- Profile/Column B Section -->
         <div id="column-b" class="content-section hidden">
           <div class="column-container">
             <div class="column-b-content">
@@ -283,9 +293,9 @@
                       needed.
                     </p>
                     <div class="profile-meta">
-                      <span
-                        ><i class="fa-regular fa-calendar"></i> Joined Since Month
-                        Year
+                      <span>
+                        <i class="fa-regular fa-calendar"></i> Joined Since
+                        Month Year
                       </span>
                       <span>@username</span>
                     </div>
@@ -341,6 +351,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Sidebar/Call to Action -->
       <div class="div2">
         <h1>Join our life-saving mission.</h1>
         <p>
@@ -348,17 +360,22 @@
           <br />blood donor.
         </p>
         <div class="row1">
-          <button id="home-btn">Home</button
-          ><button id="signup-btn">Log In</button
-          ><button id="register-btn">Register</button>
+          <button id="home-btn">Home</button>
+          <button id="signup-btn">Log In</button>
+          <button id="register-btn">Register</button>
         </div>
         <div class="row2">Row 2 Content</div>
       </div>
     </div>
+
+    <!-- Footer -->
     <footer class="footer">
-      © 2025 BloodSource. All rights reserved. <a href="#">Privacy Policy</a> |
+      © 2025 BloodSource. All rights reserved.
+      <a href="#">Privacy Policy</a> |
       <a href="#">Terms and Conditions</a>
     </footer>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     <script src="register_form.js"></script>
   </body>
